@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="instant_translit.js"></script>
+  <script>
+  $(document).ready(function(){
+        $(".ageent_trans").keypress(function(e) {
+           /*
+               e - событие
+               obect_now - объект
+               rules - правила для перевода. 
+                 1 стандарт ISO 9-95;
+                 2 - ГОСТ 16876-71;
+           */ 
+           $(this).Instant_translit({event_now: e, rules: 1, obect_now : this}); 
+        });
+  });
+  </script>
+</head>
+<body>
+<form>
+    <textarea cols="150" class="ageent_trans" rows="20"></textarea>
+</form>
+</body>
+</html>

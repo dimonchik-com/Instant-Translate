@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<head>
+ <script src="instant_translit_script_min.js"></script>
+</head>
+<body>
+<form target="chattag" name="chat">
+    <!--
+       event - событие
+       this - объект
+       rules - правила для перевода. 
+         1 стандарт ISO 9-95;
+         2 - ГОСТ 16876-71;
+    -->
+    <textarea name="message" onkeypress="translate_letter(event, this, rules=1);" cols="150" rows="20"></textarea>
+</form>
+</body>
+</html>
